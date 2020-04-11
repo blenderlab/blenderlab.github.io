@@ -1,0 +1,42 @@
+html {
+	font-family: sans;
+}
+body > section {
+	width:75%;
+	display: block;
+	padding:5px;
+
+}
+body > section > header{
+	font-size:1.4em;
+	font-weight:bold;
+	color:red;
+}
+body > section img {
+	border-radius : 5px;
+	float:left;
+	margin-right:10px;
+}
+body > section article{
+	padding-bottom:5px;
+	border-bottom : 1px dotted #CCC;
+}
+body > section article div
+{
+	float:left;
+	clear:right;
+}
+
+body > section article footer span{
+	padding-left:5px;
+	padding-right:5px;
+	font-size:0.9em;
+
+}
+body > section article footer span:first-child{
+	border-right:1px solid black ;
+	color:#888;
+}
+body > section article footer span:nth-child(2){
+	color:red;
+}
