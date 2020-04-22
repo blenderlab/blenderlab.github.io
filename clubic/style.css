@@ -1,43 +1,74 @@
 html {
-	/* pas de serif du tout */
 	font-family: sans;
 }
 
+/* 
+On définit le bloc qui contient nos articles à 75% de largeur de l'écran 
 
-img {
+Le '>' signifie de sélectionner les enfants directs (1ère génération) 
+seulement.
+
+<body>
+	<section>
+		Cette section est fille directe de body = OK
+	</section>
+	<p>
+		<section>
+			Cette section est petite fille de body = Pas OK.
+		</section>
+	</p>
+</body>
+
+*/
+
+body > section {
+	width:75%;
+	display: block;
+	padding:5px;
+
+}
+
+
+body > section > header{
+	/* la taille est 140% de la taille normale */
+	font-size:1.4em;
+	font-weight:bold;
+	color:red;
+}
+
+/* toutes les images des sections filles de body */
+body > section img {
+	/* angle arrondis de 5px + alignées à gauche + marge de 10px à droite */
 	border-radius : 5px;
 	float:left;
 	margin-right:10px;
 }
 
-span {
+body > section article{
+	/* espacement interne de 5px */
+	padding-bottom:5px;
+	/* boirdure inférieur de 1px en petits point gris */
+	border-bottom : 1px dotted #CCC;
+}
+
+body > section article div
+{
+	/* alignés à gauche */
+	float:left;
+	/* mais dégagés à droite */
+	clear:right;
+}
+
+body > section article footer span{
+	padding-left:5px;
+	padding-right:5px;
 	font-size:0.9em;
-	
+
 }
-
-article{
-	clear:both; /* right, left, both */
-	padding:5px;
-	border:1px solid red;
+body > section article footer span:first-child{
+	border-right:1px solid black ;
+	color:#888;
 }
-
-article header h1{
-	color : #444;
-	margin:0;
+body > section article footer span:nth-child(2){
+	color:red;
 }
-
-
-article footer span:first-child{
-	color : #559;	
-}
-
-article footer span:first-child::after{
-		color : #559;	
-content : " | ";
-}
-
-/* nth-child(xxx) = le ènieme enfant */
-article footer span:nth-child(2){
-	color : #F00;
-}
-
