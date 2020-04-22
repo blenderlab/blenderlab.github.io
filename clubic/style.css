@@ -22,18 +22,20 @@ seulement.
 */
 
 body > section {
-	width:75%;
+	width:50%;
 	display: block;
 	padding:5px;
+	float:left;
 
 }
+
 
 
 body > section > header{
 	/* la taille est 140% de la taille normale */
 	font-size:1.4em;
 	font-weight:bold;
-	color:red;
+	color:#F41B1B;
 }
 
 /* toutes les images des sections filles de body */
@@ -70,5 +72,68 @@ body > section article footer span:first-child{
 	color:#888;
 }
 body > section article footer span:nth-child(2){
-	color:red;
+	color:#F41B1B;
+}
+
+
+
+img {
+	width:60px;
+	height:60px;
+	border-radius : 0px 10px 0px 0px !important;
+}
+
+aside {
+	margin-left:20px;
+	float:left;
+	width:35%;
+	
+}
+
+aside header{
+	background : #2C4250;
+	border-radius:5px;
+	padding:1px;
+	height:auto;
+	color : white;
+	text-align: center;
+	text-transform: uppercase;
+}
+aside header h1{
+	font-size: 1.8em;
+	margin:0;
+	margin-top:15px;
+
+}
+aside header h2{
+	font-size: 1.5em;
+	font-weight: lighter;
+	margin:0;
+	margin-bottom:15px;
+}
+
+
+
+body > footer{
+	width:100%;
+	clear:both;
+	border:0px solid green;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	text-transform: uppercase;
+	overflow: hidden;
+	border-top:1px dotted #CCC;
+
+}
+
+footer ul,footer li{
+	list-style-type: none;
+	display: inline;
+	color: #333;
+	font-size: 0.9em;
+}
+footer li{
+padding:0 20px 0 0;
 }
